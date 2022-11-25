@@ -5,7 +5,7 @@ function setup(){
 createCanvas(200,200);
 background(51);
 //  soundFormats('mp3','ogg');
- song = loadSound('말리지 마.mp3' , loaded);
+song = loadSound('No Celestial.mp3' , loaded);
 //  mySound.play();
 button = createButton('play');
 button.mousePressed(togglePlaying);
