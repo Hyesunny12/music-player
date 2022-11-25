@@ -1,13 +1,13 @@
 
 let song;
+let button;
 
 function setup(){
-createCanvas(200,200);
-background(51);
+createCanvas(640,480);
 //  soundFormats('mp3','ogg');
 song = loadSound('No Celestial.mp3' , loaded);
 //  mySound.play();
-button = createButton('play');
+button = createButton("play");
 button.mousePressed(togglePlaying);
 
 }
@@ -25,5 +25,10 @@ function togglePlaying(){
 }
 
 function loaded(){
-    console.log('loaded');
+    console.log("loaded");
+}
+
+function draw(){
+    fill(255);
+    ellipse(60,60,40,40);
 }
