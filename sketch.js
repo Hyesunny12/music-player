@@ -1,18 +1,29 @@
 
-let mySound;
+let song;
 
 function setup(){
-
- soundFormats('mp3');
- mySound = loadSound('말리지 마.mp3' , loaded);
+createCanvas(200,200);
+background(51);
+//  soundFormats('mp3','ogg');
+ song = loadSound('말리지 마.mp3' , loaded);
 //  mySound.play();
+button = createButton('play');
+button.mousePressed(togglePlaying);
+
+}
+
+
+function togglePlaying(){
+   if(!song.isPlaying()){
+    song.play();
+    song.setVolume(0.3);
+    button.html('pause');
+   }else{
+    song.stop();
+    button.html('play');
+   }
 }
 
 function loaded(){
-    mySound.play();
-}
-
-function draw(){
-    fill(255);
-    ellipse(50,50,50,50);
+    console.log('loaded');
 }
