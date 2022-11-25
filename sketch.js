@@ -5,7 +5,7 @@ let button;
 function setup(){
 createCanvas(640,480);
 //  soundFormats('mp3','ogg');
-song = loadSound('No Celestial.mp3' , loaded);
+song = loadSound('1.mp3' , loaded);
 //  mySound.play();
 button = createButton("play");
 button.mousePressed(togglePlaying);
