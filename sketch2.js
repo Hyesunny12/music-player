@@ -7,23 +7,13 @@ var amp;
 var rb;
 var p = 0;
 let rate = 1;
-let img, img2;
-
-function preload(){
-    font = loadFont('PyeongChangPeace-Bold.ttf')
-    img = loadImage('no celestial.jpeg')
-    img2 = loadImage('star2.png')
-
-
-}
 
 function setup() {
     createCanvas(640, 480);
-    
 
 
-    song = loadSound('No celestial.mp3', loaded);
-    // song2 = loadSound('말리지 마.mp3', loaded);
+    // song = loadSound('No celestial.mp3', loaded);
+    song = loadSound('말리지 마.mp3', loaded);
 
 
     button = createButton('play');
@@ -63,26 +53,16 @@ function draw() {
     background(51);//이걸 안하면 흔적 남음
     // fill(255);
     // ellipse(60,60,40,40);
-    image(img,-80,-30);
     console.log(song.currentTime());  //현재시간 확인
 
     /////////get level로 도형 컨트롤
     var vol = amp.getLevel();
-    var diam = map(vol, 0, 0.3, 0, 255);
-    fill(0, diam);
-    strokeWeight(10);
+    var diam = map(vol, 0, 0.3, 200, 0);
+    
     // ellipse(width / 2, height / 2, diam, diam);
-    rect(0,0,640,480);
-    
-    textFont(font);
-    fill(255);
-    text('No Celestial',20,200,width,height);
-    textSize(90);
+    fill(0,0,255);
+    ellipse(100, diam, 10, 10);
 
-    image(img2,320,240);
-    
-
-    
     song.rate(rate);
 
 }
