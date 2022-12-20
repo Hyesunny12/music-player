@@ -5,7 +5,6 @@ var t;
 var len;
 var amp;
 var rb;
-var p = 0;
 let rate = 1;
 let img, img2;
 let slider;
@@ -13,7 +12,7 @@ var counter = 5;
 function preload(){
     font = loadFont('PyeongChangPeace-Bold.ttf')
     img = loadImage('no celestial.jpeg')
-    
+    song = loadSound('No celestial.mp3', loaded);
 
 
 }
@@ -95,10 +94,6 @@ function draw() {
 }
 
 function jumpSong() {
-    // len = song.currentTime();//현재시간
-    // t = len + 10; //현재시간에서 10초씩 더하기
-    // song.jump(t);
-        
     
         counter++;
         if (counter%5 === 0) {
