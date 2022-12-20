@@ -12,7 +12,7 @@ var counter = 5;
 function preload(){
     font = loadFont('PyeongChangPeace-Bold.ttf')
     img = loadImage('no celestial.jpeg')
-    song = loadSound('No celestial.mp3', loaded);
+    
 
 
 }
