@@ -24,7 +24,7 @@ function setup() {
     slider.position(255, 520);
     slider.style('width', '100px');
 
-    song = loadSound('No celestial.mp3', loaded);
+    song = loadSound('No Celestial.mp3', loaded);
     // song2 = loadSound('말리지 마.mp3', loaded);
 
 
